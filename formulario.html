@@ -1,0 +1,93 @@
+<!--Block content (Div)
+    *action
+    *method (GET - Padrão)
+-->
+    <!--https://meusite.com.br/?nome=mrcampanatti&idade=23
+<form id="form-teste" action="" method="post"> -->
+    <!--O mais recomendável=<fieldset></fieldset>, Dentro da árvore do <form>-->
+    <!--
+        Label
+        *Associar e Identificar um ou mais tag de Entrada de Dados
+        *Ajuda Bastante na Acessibilidade
+        Atributos:
+           -for *Usado para Fazer a Conexão com Outros Tipos de Elementos de Formulários
+    -->
+
+
+    <!--<label>Nome:
+        <input type="text" id="nome">
+    </label>
+    <label for="age">Idade:</label>
+    <input type="number" id="age">
+</form>
+<fieldset name="contato" form="form-teste">
+    <legend>Preencha o Formulário de Contato</legend>
+</fieldset>-->
+<!--Button
+    *types: submit(Envia o conteúdo para o BD etc), reset (limpa o conteúdo do formulário), button
+<button type="submit" name="" class="" id="">Enviar</button>-->
+
+<form action="" method="post">
+    <!--<fieldset name="contato">
+        <legend>Preencha o Formulário de Contato</legend>
+    </fieldset>-->
+    <!--
+        <datalist>
+            *Lista de Valores com Sugestões para Algum Elemento input
+            *Usuário Poderá Selecionar um dos Valores ou Colocar Novos Valores
+    -->
+    <!--Lista de Professores-->
+    <!--<datalist id="prof-list">
+        <option>Luan</option>
+        <option>Jenifer</option>
+        <option>Regis</option>
+    </datalist>
+    <input type="text" list="prof-list" placeholder="Escolha seu Professor">-->
+
+<fieldset>
+    <legend>Trabalhando com Inputs</legend>
+    <!--Input text-->
+    <input 
+    type="text" 
+    placeholder="Preencha o Seu Nome"
+    size="60"
+    minlength="8"
+    maxlength="20"
+    title="Preencha o Dado"
+    required
+    readonly
+    >
+    <!--disabled
+        readonly
+    -->
+<br>
+    <!--Input Number-->
+    <input 
+    type="number" 
+    size="50"
+    minlength="6"
+    maxlength="12"
+    title="Preencha o Dado"
+    >
+<br>
+    <!--Input E-mail-->
+    <input 
+    type="email" 
+    size="24"
+    title="Preencha o Dado"
+    required
+    >
+<br>
+    <!--Input Senha-->
+    <input 
+    type="password" 
+    size="24"
+    minlength="8"
+    maxlength="16"
+    title="Preencha o Dado"
+    required
+    >
+<br>
+    <button type="submit">Enviar</button>
+</fieldset>
+</form>
