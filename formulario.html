@@ -27,7 +27,7 @@
     *types: submit(Envia o conteúdo para o BD etc), reset (limpa o conteúdo do formulário), button
 <button type="submit" name="" class="" id="">Enviar</button>-->
 
-<form action="" method="post">
+<form action="" method="post" enctype="multipart-/form-data">
     <!--<fieldset name="contato">
         <legend>Preencha o Formulário de Contato</legend>
     </fieldset>-->
@@ -82,11 +82,73 @@
     <input 
     type="password" 
     size="24"
-    minlength="8"
-    maxlength="16"
-    title="Preencha o Dado"
+    title="Sua Senha Precisa ser em Hexadecimal"
+    pattern="[0-9a-fA-F]{4,8}"
     required
+    inputmode="numeric"
     >
+<br>
+    <!--Input hidden-->
+    <input type="hidden" value="Eu estou Escondido -_-">
+<br>    
+    <!--Input Color-->
+    <input type="color">
+<br>
+    <!--Input date-->
+    <input type="date">
+    <input type="datetime-local">
+    <input type="month">
+    <input type="week">
+    <input type="time">
+<br>  
+    <!--Input type check (checkbox)-->
+    <label for="area">Seu Interesse Maior é por Qual Área</label>
+    <div>
+        <input type="checkbox" name="interesse" id="frontend" value="Front-End Luan Monteiro" checked>
+        <label for="frontend">Front-End Luan Monteiro</label>
+        <input type="checkbox" name="interesse" id="backend" value="Back-End Regis Santos">
+        <label for="backend">Back-End Regis Santos</label>
+        <input type="checkbox" name="interesse" id="designuiux" value="Design UI/UX Jenifer Vieira">
+        <label for="designuiux">Design UI/UX Jenifer Vieira</label>
+        </div>
+<br><br><br>
+<!--Interesse = Front-End Luan Monteiro, Back-End Regis Santos, Design UI/UX Jenifer Vieira-->
+
+<!--Radio Button-->
+<h3>Deseja Receber Notificação da BeAcademy?</h3>
+<label for="yes">Sim</label>
+<input type="radio" id="yes" checked name="notification" value="yes">
+
+<label for="no">Não</label>
+<input type="radio" id="no" name="notification" value="no">
+<br><br>
+<!--
+    SELECT
+    Elemento de Formulário Capaz de Criar uma Lista de Opções a Serem Selecionadas, DropDown
+-->
+<label for="teacher">Professores:</label>
+<select name="select-teacher" id="teacher" multiple size="">
+    <option value="">Selecione um Professor</option>
+    <option value="Luan Santos">Luan Santos</option>
+    <option value="Moacir Garcia">Moacir Garcia</option>
+    <option value="Jenifer Vieira">Jenifer Vieira</option>
+    <option value="Regis Eduardo">Regis Eduardo</option>
+</select>
+
+<!--Input Search
+    *Elemento Usado para Pesquisar Conteúdo
+    *Parecido com o Campo "text" Pode Receber Atributos e Comportamentos
+-->
+<br><br>
+<input type="search" name="" title="" placeholder="Busque o Usuário Pelo ID" size="24" pattern="[0-9]{0,3}" title="Busque por o ID de Até 3 Dígitos" required>
+<br><br>
+
+<!--Manipulando Arquivos com o File
+    *Usuário Poderá Fazer um Upload de 1 ou Mais Arquivos de Acordo com a Extensão
+-->
+
+<input type="file" value="" accept=".doc, .pdf, audio/*, image/*, .png, .jpg, .xlsx" multiple name="" id="">
+
 <br>
     <button type="submit">Enviar</button>
 </fieldset>
